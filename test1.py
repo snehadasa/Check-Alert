@@ -30,12 +30,17 @@ print()
 token = auth.json().get('auth_token')
 url_p = 'https://intranet.hbtn.io/projects/' + project  + '.json?auth_token=' + token
 pj = requests.get(url=url_p)
+print('requesting project info')
 i = 0
 flag = 0
 while (i < len(pj.json().get('tasks'))):
+  print('checking if checker will be available')
   if pj.json().get('tasks')[i].get('checker_available') is True:
     flag = 1
     task_id = pj.json().get('tasks')[i].get('id')
+    break
+    print('saving task number {}'.format(task_id))
+  i += 1
 if flag == 0:
   print("No checker for project")
   exit
@@ -43,7 +48,8 @@ if flag == 0:
 sched = BlockingScheduler()
 @sched.scheduled_job('interval', seconds=10)
 def timed_job():
-  url_request = 'https://intranet.hbtn.io/tasks/' + task_id + 'start_correction.json' + '.json?auth_token=' + token
+  url_request = 'https://intranet.hbtn.io/tasks/' + str(task_id) + '/start_correction' + '.json?auth_token=' + str(token)
+  print(url_request)
   request_dict = requests.post(url=url_request).json()
   request_id = request_dict.get('id')
   if request_id != 0:
