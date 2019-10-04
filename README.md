@@ -29,8 +29,29 @@ Once you do that you'll be ready to clone this repo and run the script. You'll b
 * URL for Slack channel to send alert to. Please visit the [Slack webhook website](https://checkalert.slack.com/apps/new/A0F7XDUAZ-incoming-webhooks) to find this URL
     ![webhook](https://i.imgur.com/ScVkc03.png)
 ---
-### Demo of Usage
-<!-- IMAGES OF USAGE --->
+## Demo of Usage
+![demo](https://i.imgur.com/tcyIkD9.png)
+
+```
+Check-Alert$ ./check_alert.py
+
+Visit: https://intranet.hbtn.io/dashboards/my_tools
+and enter your API key from the bottom of the page:
+<Your API key>
+
+Enter your Holberton ID:
+<Your Holberton ID>
+
+Enter your Holberton password. (We do not store it)
+<Your Holberton password>
+
+Which project? (ID at the end of the project's URL)
+<The project ID>
+
+Please visit https://checkalert.slack.com/apps/new/A0F7XDUAZ-incoming-webhooks
+Select a channel and paste the link here:
+<Long link>
+```
 
 ---
 ## About
@@ -43,4 +64,4 @@ Once you do that you'll be ready to clone this repo and run the script. You'll b
 * **Thomas Graeff** - [GitHub](https://github.com/graefft) | [LinkedIn](https://www.linkedin.com/in/thomas-graeff-b3ab4380/)
 * **Nick O'Keefe** - [GitHub](https://github.com/nokeefe) | [LinkedIn](https://www.linkedin.com/in/nbokeefe/)
 * **Van Phan** - [GitHub](https://github.com/vdphan) | [LinkedIn](https://www.linkedin.com/in/van-phan-344764180/) 
-At [Holberton School](http://holbertonschool.com).
+at [Holberton School](http://holbertonschool.com)
