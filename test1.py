@@ -19,8 +19,10 @@ def get_user_info():
   print()
   project = input("Which project? (id at the end of project's URL\n")
   print()
-  return key, user_id, psw, project
-key, user_id, psw, project = get_user_info()
+  slack_channel = input('Please visit https://checkalert.slack.com/apps/new/A0F7XDUAZ-incoming-webhooks\n Select a channel and paste the link here: ')
+  print()
+  return key, user_id, psw, project, slack_channel
+key, user_id, psw, project, slack_channel = get_user_info()
 email = user_id + '@holbertonschool.com'
 user_data = {'api_key':key, 'email': email, 'password': psw, 'scope': "checker"}
 url = 'https://intranet.hbtn.io/users/auth_token.json'
@@ -55,13 +57,13 @@ def timed_job():
   if request_id != 0:
     checkers = "Checker is out"
     payload={"text": checkers}
-    requests.post('https://hooks.slack.com/services/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', data=json.dumps(payload), headers={\
+    requests.post(slack_channel, data=json.dumps(payload), headers={\
 'Content-Type': 'application/json'} )
     # exit()
   else:
     checkers = "Checkers for " + pj.json().get('name') + " is not available"
     payload={"text": checkers}
-    requests.post('https://hooks.slack.com/services/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', data=json.dumps(payload), headers={'C\
+    requests.post(slack_channel, data=json.dumps(payload), headers={'C\
     ontent-Type': 'application/json'} )
 
 # sched.configure(options_from_ini_file)
