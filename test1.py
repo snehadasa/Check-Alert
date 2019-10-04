@@ -45,7 +45,7 @@ while (i < len(pj.json().get('tasks'))):
   i += 1
 if flag == 0:
   print("No checker for project")
-  exit
+  exit()
 
 sched = BlockingScheduler()
 @sched.scheduled_job('interval', seconds=10, id='stop')
