@@ -20,15 +20,14 @@ To install **APScheduler** please use the following code:
 `sudo pip3 install apscheduler `
 
 Once you do that you'll be ready to clone this repo and run the script. You'll be met with a series of prompts that are necessary to make sure the correct project is being accessed. Here are the list of prompts you'll need to enter:
-* Your API key from the '[My Tools](https://intranet.hbtn.io/dashboards/my_tools)' section of your Holberton profile
-* Your Holberton School ID number
-* Your Holberton School password (we do not store this password anywehre)
-* The project ID, which can be found next to the project title on the project list page 
+* Your API key from the '[My Tools](https://intranet.hbtn.io/dashboards/my_tools)' section of your Holberton profile. Click the link and scroll to the bottom of the page.
+* Your Holberton School ID number.
+* Your Holberton School password (we do not store this password anywehre).
+* The project ID, which can be found next to the project title on the project list page.
+    ![project_id](https://i.imgur.com/m6BYfFU.png?1)
 
-    * Find project ID:
-       
-        ![project_id](https://imgur.com/a/dVkilEd)
 * URL for Slack channel to send alert to. Please visit the [Slack webhook website](https://checkalert.slack.com/apps/new/A0F7XDUAZ-incoming-webhooks) to find this URL
+    ![webhook](https://i.imgur.com/ScVkc03.png)
 ---
 ### Demo of Usage
 <!-- IMAGES OF USAGE --->
@@ -39,8 +38,7 @@ Once you do that you'll be ready to clone this repo and run the script. You'll b
 
 * **David Kwan** - [GitHub](https://github.com/dwkwan) | [LinkedIn](https://www.linkedin.com/in/david-kwan-1b0930129/)
 * **Marc Cavigli** - [GitHub](https://github.com/MCavigli) | [LinkedIn](https://www.linkedin.com/in/marccavigli/)
-* **Sneha Dasa Lakshminath** - [GitHub](https://github.com/snehadasa) | [LinkedIn](https://www.linkedin.com/in/sneha-dasa-lakshmi\
-nath-a3433539/)
+* **Sneha Dasa Lakshminath** - [GitHub](https://github.com/snehadasa) | [LinkedIn](https://www.linkedin.com/in/sneha-dasa-lakshminath-a3433539/)
 * **Russell Molimock** - [GitHub](https://github.com/Rmolimock) | [LinkedIn](https://www.linkedin.com/in/russellmolimock/)
 * **Thomas Graeff** - [GitHub](https://github.com/graefft) | [LinkedIn](https://www.linkedin.com/in/thomas-graeff-b3ab4380/)
 * **Nick O'Keefe** - [GitHub](https://github.com/nokeefe) | [LinkedIn](https://www.linkedin.com/in/nbokeefe/)
