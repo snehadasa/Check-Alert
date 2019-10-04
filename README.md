@@ -1,4 +1,4 @@
-# Checker Buddy
+# Check Alert
 ---
 ## This project makes use of Holberton School's Checker API.
 The checker is a utility that runs a student's code against a test suite. It makes sure their code functions properly and even tests for edge cases.
@@ -7,30 +7,30 @@ The checker is a utility that runs a student's code against a test suite. It mak
 
 However, it is not immediately available to students when a new project is released. Sometimes it is withheld until an unspecified time to let students try to write functioning code without the additional assistance that the checker provides.
 
-Wouldn't it be nice to know when the checker becomes available though? Some kind of an alert that lets you know you can check the code you've written? **Checker Buddy** uses Holberton's checker API to alert students when the checker is released. The alert is then sent to a Slack channel of their choice.
+Wouldn't it be nice to know when the checker becomes available though? Some kind of an alert that lets you know you can check the code you've written? **Check Alert** uses Holberton's checker API to alert students when the checker is released. The alert is then sent to a Slack channel of their choice.
 
-Occasionally a project does not have a checker. This may be because there needs to be a manual review by a human instead of an automatic review. In this case, **Checker Buddy** will let the student know that there will not be a checker for the specified project.
+Occasionally a project does not have a checker. This may be because there needs to be a manual review by a human instead of an automatic review. In this case, **Check Alert** will let the student know that there will not be a checker for the specified project.
 
 ---
 ## How does it work?
 
-To run this script, you'll first need to install **[APScheduler](https://apscheduler.readthedocs.io/en/latest/)**, a Python library that will periodically check to see if the checker is available.
+First you'll need to `git clone` this repository so you have the script. Please enter the following command:
 
-To install **APScheduler** please use the following code:
-`sudo pip3 install apscheduler `
+`git clone https://github.com/nokeefe/Check-Alert.git`
 
-Once you do that you'll be ready to clone this repo and run the script. You'll be met with a series of prompts that are necessary to make sure the correct project is being accessed. Here are the list of prompts you'll need to enter:
+When you run the script, you'll be met with a series of prompts that are necessary to make sure the correct project is being accessed. Here are the list of prompts you'll need to enter:
 * Your API key from the '[My Tools](https://intranet.hbtn.io/dashboards/my_tools)' section of your Holberton profile. Click the link and scroll to the bottom of the page.
 * Your Holberton School ID number.
 * Your Holberton School password (we do not store this password anywehre).
 * The project ID, which can be found next to the project title on the project list page.
-    ![project_id](https://i.imgur.com/m6BYfFU.png?1)
+
+   ![project_id](https://i.imgur.com/m6BYfFU.png?1)
 
 * URL for Slack channel to send alert to. Please visit the [Slack webhook website](https://checkalert.slack.com/apps/new/A0F7XDUAZ-incoming-webhooks) to find this URL
+
     ![webhook](https://i.imgur.com/ScVkc03.png)
 ---
 ## Demo of Usage
-![demo](https://i.imgur.com/tcyIkD9.png)
 
 ```
 Check-Alert$ ./check_alert.py
