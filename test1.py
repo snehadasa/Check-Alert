@@ -48,7 +48,7 @@ if flag == 0:
   exit
 
 sched = BlockingScheduler()
-@sched.scheduled_job('interval', seconds=10)
+@sched.scheduled_job('interval', seconds=10, id='stop')
 def timed_job():
   url_request = 'https://intranet.hbtn.io/tasks/' + str(task_id) + '/start_correction' + '.json?auth_token=' + str(token)
   print(url_request)
@@ -59,7 +59,8 @@ def timed_job():
     payload={"text": checkers}
     requests.post(slack_channel, data=json.dumps(payload), headers={\
 'Content-Type': 'application/json'} )
-    # exit()
+    sched.remove_job('stop')
+    exit()
   else:
     checkers = "Checkers for " + pj.json().get('name') + " is not available"
     payload={"text": checkers}
