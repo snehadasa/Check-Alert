@@ -55,14 +55,14 @@ def timed_job():
   if request_id != 0:
     checkers = "Checker is out"
     payload={"text": checkers}
-    requests.post('https://hooks.slack.com/services/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', data=json.dumps(payload), headers={\
-'Content\
-    -Type': 'application/json'} )
-    exit()
-  checkers = "Checkers for " + pj.json().get('name') + " is not available"
-  payload={"text": checkers}
-  requests.post('https://hooks.slack.com/services/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', data=json.dumps(payload), headers={'C\
-ontent-Type': 'application/json'} )
+    requests.post('https://hooks.slack.com/services/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', data=json.dumps(payload), headers={\
+'Content-Type': 'application/json'} )
+    # exit()
+  else:
+    checkers = "Checkers for " + pj.json().get('name') + " is not available"
+    payload={"text": checkers}
+    requests.post('https://hooks.slack.com/services/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', data=json.dumps(payload), headers={'C\
+    ontent-Type': 'application/json'} )
 
 # sched.configure(options_from_ini_file)
 sched.start()
