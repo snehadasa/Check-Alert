@@ -47,10 +47,6 @@ if flag == 0:
     print("No checker for project")
     exit()
 
-sched = BlockingScheduler()
-
-
-@sched.scheduled_job('interval', seconds=10, id='stop')
 def timed_job():
     url_request = 'https://intranet.hbtn.io/tasks/' + str(task_id) + '/start_correction' + '.json?auth_token=' + str(token)
     print(url_request)
@@ -60,12 +56,17 @@ def timed_job():
         checkers = "Checker is out"
         payload = {"text": checkers}
         requests.post(slack_channel, data=json.dumps(payload), headers={'Content-Type': 'application/json'})
-        sched.remove_job('stop')
         exit()
     else:
         checkers = "Checkers for " + pj.json().get('name') + " is not available"
         payload = {"text": checkers}
         requests.post(slack_channel, data=json.dumps(payload), headers={'Content-Type': 'application/json'})
+        from time import sleep
+        sleep(10)
 
         # sched.configure(options_from_ini_file)
-sched.start()
+  
+while (1):
+  timed_job()
+  print('The checker is out and a message has been sent to slack.')
+exit()
