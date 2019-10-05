@@ -1,3 +1,4 @@
+![logo](https://i.imgur.com/kRERWFj.png) 
 # Check Alert
 ---
 ## This project makes use of Holberton School's Checker API.
@@ -28,7 +29,7 @@ When you run the script, you'll be met with a series of prompts that are necessa
 
 * URL for Slack channel to send alert to. Please visit the [Slack webhook website](https://checkalert.slack.com/apps/new/A0F7XDUAZ-incoming-webhooks) to find this URL
 
-    ![webhook](https://i.imgur.com/ScVkc03.png)
+    ![webhook](https://i.imgur.com/ulj2AQ7.png)
 ---
 ## Demo of Usage
 
