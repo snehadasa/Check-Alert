@@ -1,5 +1,5 @@
-# Check Alert
 ![logo](https://i.imgur.com/kRERWFj.png) 
+# Check Alert
 ---
 ## This project makes use of Holberton School's Checker API.
 The checker is a utility that runs a student's code against a test suite. It makes sure their code functions properly and even tests for edge cases.
